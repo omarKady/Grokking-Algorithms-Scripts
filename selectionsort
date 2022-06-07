@@ -17,16 +17,11 @@ def findSmallest(list1):
 
 def selectionSort(arr):
     arr1 = []
-    print(findSmallest(arr))
     for i in range(len(arr)):
-        x = findSmallest(arr)
-        arr1.append(x)
-        arr.remove(x)
+        smallestItem = findSmallest(arr)
+        arr1.append(smallestItem)
+        arr.remove(smallestItem)
 
-    sortedList = []
-    for i in arr:
-        print(i)
-    print('@', arr1)
+    return arr1
 
-
-selectionSort([21,5,2,-13,1])
+print(selectionSort([21,5,2,-13,1]))
