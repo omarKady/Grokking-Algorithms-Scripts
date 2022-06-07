@@ -1,0 +1,32 @@
+# Selection Sort Algorithm
+
+# Function to find smallest item in list
+
+def findSmallest(list1):
+    smallestItem = list1[0]
+    for i in range(len(list1)-1):
+        if list1[i] < list1[i+1] and list1[i] < smallestItem:
+            smallestItem = list1[i]
+        elif list1[i+1] < smallestItem:
+            smallestItem = list1[i+1]
+    return smallestItem
+
+
+
+# Main function to sort list
+
+def selectionSort(arr):
+    arr1 = []
+    print(findSmallest(arr))
+    for i in range(len(arr)):
+        x = findSmallest(arr)
+        arr1.append(x)
+        arr.remove(x)
+
+    sortedList = []
+    for i in arr:
+        print(i)
+    print('@', arr1)
+
+
+selectionSort([21,5,2,-13,1])
